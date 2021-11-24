@@ -68,8 +68,8 @@ const Question = ({
                 key={i}
                 onClick={() => handleCheck(i)}
                 disabled={selected}
+                dangerouslySetInnerHTML={{__html:i}}
               >
-                {i}
               </button>
             ))}
         </div>
