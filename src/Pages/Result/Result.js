@@ -11,7 +11,7 @@ const Result = ({ name, score }) => {
   }
 
   const handleStorage = () => {
-    setUser({name:name, score:score, error: (quantity - score) })
+    setUser({name:name, score:score, error: (quantity > 50 ? (50 - score) : (quantity - score) ) })
     setOpen(!false)
   }
 
