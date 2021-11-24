@@ -17,7 +17,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
     } else {
       setError(false);
       fetchQuestions(quantity);
-      setGameState('confirm')
+      setGameState('quiz')
     }
   };
 

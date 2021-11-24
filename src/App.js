@@ -3,7 +3,6 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import { GameStateContext } from "./helpers/context";
-import { Confirm } from "./Pages/Confirm";
 import Home from "./Pages/Home/Home";
 import Quiz from "./Pages/Quiz/Quiz";
 import Result from "./Pages/Result/Result";
@@ -38,7 +37,6 @@ function App() {
       <div className="app">
         <Header />
         {gameState === "home" && <Home name={name} setName={setName} fetchQuestions={fetchQuestions} />}
-        {gameState === "confirm" && <Confirm />}
         {gameState === "quiz" && <Quiz name={name} questions={questions} score={score} setScore={setScore} setQuestions={setQuestions}/>}
         {gameState === "result" && <Result name={name} score={score}/>}
       </div>
