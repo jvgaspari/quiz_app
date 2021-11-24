@@ -6,9 +6,6 @@ import "./Result.css";
 const Result = ({ name, score }) => {
   const {setGameState,quantity, user, setUser} = useContext(GameStateContext)
   const [open, setOpen] = useState(false);
-  const handleSubmit = () => {
-    setGameState('home')
-  }
 
   const handleStorage = () => {
     setUser({name:name, score:score, error: (quantity > 50 ? (50 - score) : (quantity - score) ) })
@@ -59,9 +56,9 @@ const Result = ({ name, score }) => {
             color="secondary"
             size="large"
             style={{ alignSelf: "center", marginTop: 20 }}
-            onClick={handleSubmit}
+            href='/'
           >
-            Go to homepage
+            New Quiz
           </Button>
           <Button
             variant="contained"
